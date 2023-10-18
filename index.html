@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DRR</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dubrox/Multiple-Dates-Picker-for-jQuery-UI@master/jquery-ui.multidatespicker.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+  </head>
+
+  <body>
+    <button id="addRowButton">Add New</button>
+    <table id="data-table">
+      <tr>
+        <th>Action</th>
+        <th>ID</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Month,Year</th>
+        <th>Date Excludes</th>
+        <th>Number of Days</th>
+        <th>Lead Count</th>
+        <th>Expected DRR</th>
+        <th>Last Update</th>
+      </tr>
+      <tr>
+        <td>N/A</td>
+        <td>
+          <input
+            type="text"
+            id="id"
+            class="editable"
+            value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A"
+            disabled
+          />
+        </td>
+        <td>
+          <input type="date" id="start_date" name="start_month_year" />
+        </td>
+        <td><input type="date" id="end_date" name="end_month_year" /></td>
+        <td id="month_year_cell"></td>
+        <td>
+          <!-- <input type="date" id="excludes_date" class="datepicker" /> -->
+          <!-- <input type="date" id="date-picker" placeholder="Select Date" /> -->
+
+          <input type="text" id="datePick" />
+          <div id="date"></div>
+          <!-- <input type="date" id="excludes_date"></td> -->
+        </td>
+
+        <td id="totalDays"></td>
+        <td><input type="number" id="leadCount" value="0" /></td>
+        <td>
+          <input type="number" disabled value="0" id="expectedDRR" />
+        </td>
+        <td>
+          <button onclick="buttonHandler()">Save</button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+  </body>
+</html>
